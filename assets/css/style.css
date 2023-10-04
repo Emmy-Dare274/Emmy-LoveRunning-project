@@ -25,6 +25,20 @@ h1 {
     letter-spacing: 2px;
     color: #252525;
 }
+/* Styling the Nav here, remove bullet using list-style-type */
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+/* Add space out vertically under the list items */
+#menu > li {
+    margin-bottom: 1em;
+}
+/* For visual cue when a user is on a particular page, we add class to the li */
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
 
 /* Header */
 header {
