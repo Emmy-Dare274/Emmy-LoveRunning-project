@@ -8,6 +8,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /* General body style */
 body {
     min-height: 100vh;
@@ -25,19 +26,33 @@ h1 {
     letter-spacing: 2px;
     color: #252525;
 }
+
 /* Styling the Nav here, remove bullet using list-style-type */
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
+
 /* Add space out vertically under the list items */
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
 }
+
 /* For visual cue when a user is on a particular page, we add class to the li */
 .active {
     border-bottom: 1px solid #3a3a3a;
+}
+
+/* Add a Navbar styles with dropdown toggle here */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
 }
 
 /* Header */
@@ -60,10 +75,11 @@ header a {
 main {
     background-color: lightblue;
     /* This allows main element take up any surplus space to push footer down. */
-        flex: 1 0 auto;
+    flex: 1 0 auto;
 }
+
 /* footer */
 footer {
     background-color: orange;
-    
+
 }
