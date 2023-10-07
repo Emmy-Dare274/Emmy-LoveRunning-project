@@ -118,8 +118,8 @@ main {
 /* here we target any direct child of the cover-text that is h2 and h3*/
 #cover-text > h2, #cover-text > h3 {
     color: #ffffff;
-
 }
+
 
 
 /* initial footer deleted here, here we add the social networks selector*/
