@@ -88,12 +88,19 @@ header a {
     color: inherit;
 }
 
-/* Main content */
+/* Main content (we remove the background color here (it is replaced with an image) as we don't need it.) */
 main {
-    background-color: lightblue;
+    
     /* This allows main element take up any surplus space to push footer down. */
     flex: 1 0 auto;
     margin-top: 47px;
+}
+
+ /* Hero id section styles (images uses file path. remember to use cover to avoid image squash) */
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
 }
 
 /* initial footer deleted here, here we add the social networks selector*/
