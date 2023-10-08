@@ -10,6 +10,7 @@
 }
 
 /* General body style */
+
 body {
     min-height: 100vh;
     display: flex;
@@ -25,6 +26,11 @@ h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
+}
+/* this is to hide elements (utility hide)from users but still make it
+available to search engines. usually a class. */
+.hidden-heading {
+    display: none;
 }
 
 /* Styling the Nav here, remove bullet using list-style-type */
