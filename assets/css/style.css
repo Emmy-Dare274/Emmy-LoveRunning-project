@@ -267,13 +267,13 @@ main {
 }
 
 /* Add Media query for large (laptops and desktops, 992px and up) here */
-@media screen (min-width: 992px) {
+@media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 }
 
-@media screen (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     /* reasons image section styles for laptop and desktop */
     #benefits {
         display: flex;
