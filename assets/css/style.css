@@ -209,6 +209,15 @@ main {
 #times h3 {
     color: #fafafa;
 }
+/* Gallery page styles here */
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
+}
 
 
 /* We add media query at the bottom of CSS. Media query: tablets and larger (768px and up) */
