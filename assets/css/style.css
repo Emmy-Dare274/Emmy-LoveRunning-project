@@ -183,6 +183,15 @@ main {
     padding: 5%;
     color: #3a3a3a;
 }
+/* Add Media query: large or landscape phones (576px and up)as this is for smaller screen,
+it should go below the regular footer styles and above the other media queries */
+
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
 
 /* Add background for the Urban here */
 #times {
@@ -218,6 +227,8 @@ main {
 #photos {
     line-height: 0;
 }
+
+
 
 
 /* We add media query at the bottom of CSS. Media query: tablets and larger (768px and up) */
@@ -272,6 +283,11 @@ main {
         align-self: flex-end;
 
     }
+    /* Gallery styles here page for larger screen*/
+
+    #photos {
+        column-count: 3;
+    }
 
 }
 
@@ -279,6 +295,11 @@ main {
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+    /* Gallery styles page here for laptops */
+
+    #photos {
+        column-count: 4;
     }
 }
 
