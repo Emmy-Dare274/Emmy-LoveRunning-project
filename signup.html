@@ -40,37 +40,34 @@
     <!-- Sign up form content Here-->
     <main>
         <section id="signup">
-            <form action="https://formdump.codeinstitute.net" method="POST" id="signup-form"></form>
-            <h2><i class="fa-solid fa-heart-pulse"></i>Let's get you signed up</h2>
-            <!-- Adding input and label fields to create box for forms Here-->
-            <label for="first_name">First Name</label>
-            <input type="text" name="first_name" id="first_name" class="text-input" required>
-            <br>
-            <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" id="last_name" class="text-input" required>
-            <br>
-            <label for="email_address">Email Address</label>
-            <input type="email" name="email_address" id="email_address" class="text-input" required>
-            <br>
-
-            <!-- Nest Div with radio button Here-->
-            <div class="radio-buttons">
-                <div>
-                    <label for="road">Road</label>
-                    <input type="radio" name="running_preference" id="road" value="road" required checked>
+            <form id="signup-form" method="POST" action="https://formdump.codeinstitute.net">
+                <h2><i class="fa-solid fa-heartbeat"></i> Let's get you signed up!</h2>
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" class="text-input" required>
+                <br>
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" class="text-input" required>
+                <br>
+                <label for="email_address">Email Address</label>
+                <input type="email" name="email_address" id="email_address" class="text-input" required>
+                <br>
+                <!-- Add Div for inputs and label fields Here-->
+                <div class="radio-buttons">
+                    <div>
+                        <label for="road">Road</label>
+                        <input type="radio" name="running_preference" id="road" value="road" required checked>
+                    </div>
+                    <div>
+                        <label for="trail">Trail</label>
+                        <input type="radio" name="running_preference" id="trail" value="trail" required>
+                    </div>
+                    <div>
+                        <label for="both">Both</label>
+                        <input type="radio" name="running_preference" id="both" value="both" required>
+                    </div>
                 </div>
-                <div>
-                    <label for="trail">Trail</label>
-                    <input type="radio" name="running_preference" id="trail" value="trail" required>
-                </div>
-                <div>
-                    <label for="both">Both</label>
-                    <input type="radio" name="running_preference" id="both" value="both" required>
-                    <br>
-                </div>
-            </div>
-            <!-- Add submit button Here after the nested divs -->
-            <button class="join-button" type="submit">Let's Run!</button>
+                <button type="submit" class="join-button">Let's Run!</button>
+            </form>
         </section>
     </main>
 
