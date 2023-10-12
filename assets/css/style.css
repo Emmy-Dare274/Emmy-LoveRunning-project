@@ -33,6 +33,25 @@ available to search engines. usually a class. */
     display: none;
 }
 
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+/* removing the line under the links */
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Styling the Nav here, remove bullet using list-style-type */
 #menu {
     font-size: 110%;
@@ -59,11 +78,11 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
+    top: 100%;
 }
 /* We add Navbar toggle here using the tilde pseudo class selector */
 #nav-toggle:checked~nav {
     display: block;
-    top: 100%;
 }
 
 #nav-toggle {
@@ -75,25 +94,6 @@ nav {
 }
 
 
-/* Header */
-header {
-    background-color: #ffffff;
-    padding: 0 1rem;
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-/* removing the line under the links */
-header a {
-    text-decoration: none;
-    color: inherit;
-}
-
 /* Main content (we remove the background color here (it is replaced with an image) as we don't need it.) */
 main {
     
@@ -104,44 +104,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-/* styling the signup page  and input fields */
-#signup-form {
-    color: #ffffff;
-    background-color: rgba(60, 60, 60, 0.6);
-    padding: 30px;
-}
-
-#signup-form > h2 {
-    color: #fafafa;
-    margin-bottom: 20px;
-}
-.text-input {
-    background: transparent;
-    color: #fafafa;
-    width: 100%;
-    height: 25px;
-    margin: 5px 0 20px 0;
-    border: 1px solid #fafafa;
-    border-radius: 2px;
-    padding: 0 5px;
-
-}
-
-.radio-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.join-button {
-    margin-top: 20px;
-    border-radius: 2px;
-    padding: 15px 32px;
-    font-size: 100%;
-    background-color: #454b1b;
-    color: #fafafa;
-}
-
 
  /* Hero id section styles (images uses file path. remember to use cover to avoid image squash) */
 #hero {
@@ -210,31 +172,7 @@ main {
     justify-content: center;
 }
 
-/* initial footer deleted here, here we add the social networks selector*/
-#social-networks {
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-#social-networks i {
-    font-size: 160%;
-    padding: 5%;
-    color: #3a3a3a;
-}
-/* Add Media query: large or landscape phones (576px and up)as this is for smaller screen,
-it should go below the regular footer styles and above the other media queries */
-
-@media screen and (min-width: 576px) {
-    #photos {
-        column-count: 2;
-        column-gap: 0;
-    }
-}
-
-/* Add background for the Urban here */
+/* Meetup times: Add background for the Urban here */
 #times {
     background: url("../images/dublin-city.webp") no-repeat center / cover;
     /* this handles responsivity without the need for a media query*/
@@ -259,6 +197,7 @@ it should go below the regular footer styles and above the other media queries *
 #times h3 {
     color: #fafafa;
 }
+
 /* Gallery page styles here */
 #photos img {
     width: 100%;
@@ -267,6 +206,77 @@ it should go below the regular footer styles and above the other media queries *
 
 #photos {
     line-height: 0;
+}
+
+/* styling the signup page form and input fields */
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#signup-form > h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+
+}
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
+}
+
+
+/* initial footer deleted here, here we add the social networks selector*/
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+/* Add Media query: large or landscape phones (576px and up)as this is for smaller screen,
+it should go below the regular footer styles and above the other media queries */
+
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
 }
 
 
@@ -329,6 +339,26 @@ it should go below the regular footer styles and above the other media queries *
     #photos {
         column-count: 3;
     }
+    /* signup form styles*/
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+    
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
+
 
 }
 
